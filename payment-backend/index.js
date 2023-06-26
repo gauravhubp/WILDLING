@@ -30,13 +30,13 @@ const razorpay = new Razorpay({
 app.use(cors());
 
 // Serving company logo
-app.get("/logo.png", (req, res) => {
+app.get("logo.png", (req, res) => {
   res.sendFile(path.join(__dirname, "logo.png"));
 });
 
 
 
-app.post("/razorpay", async (req, res) => {
+app.post("razorpay", async (req, res) => {
   const payment_capture = 1;
   const amount = price;
   const currency = "INR";
